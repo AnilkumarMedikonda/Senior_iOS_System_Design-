@@ -28,11 +28,10 @@ Use this order in every design round.
 | 02 | Image_Loading_And_Caching | NSCache + disk cache, cancellation, cell reuse | 🔴 High | ✅ |
 | 03 | Offline_First_And_Sync | Local source of truth, sync queue, conflicts | 🔴 High | ✅ |
 | 04 | Pagination_And_Search | Offset vs cursor paging, debounce, cancel old requests | 🔴 High | ✅ |
-| 05 | Deep_Linking_System | Universal Links, router, cold/warm start | 🔴 High | ⬜ |
-| 06 | Authentication_System | Keychain, token refresh, session expiry | 🟠 Medium | ⬜ |
-| 07 | ECommerce_App | Modules, cart and checkout, catalog caching | 🟠 Medium | ⬜ |
-| 08 | Chat_App | WebSocket, message sync, offline queue, delivery status | 🔴 High | ⬜ |
-| 09 | System_Design_Mocks | 4 timed 45-min mocks | 🔴 High | ⬜ |
+| 05 | Deep_Linking_System | Universal Links, router, cold/warm start | 🔴 High | ✅ |
+| 06 | Authentication_System | Keychain, token refresh, session expiry | 🟠 Medium | ✅ |
+| 07 | ECommerce_App | Modules, cart and checkout, catalog caching | 🟠 Medium | ✅ |
+| 08 | Chat_App | WebSocket, message sync, offline queue, delivery status | 🔴 High | ✅ |
 
 ---
 
@@ -47,4 +46,4 @@ Use this order in every design round.
 
 ## Status
 
-4 / 8 systems complete
+8 / 8 systems complete ✅
