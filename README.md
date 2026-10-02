@@ -30,9 +30,9 @@ Use this order in every design round.
 | 04 | Pagination_And_Search | Cursor paging, debounce, cancel old requests | 🔴 High | ⬜ |
 | 05 | Deep_Linking_System | Universal Links, router, cold/warm start | 🔴 High | ⬜ |
 | 06 | Authentication_System | Keychain, token refresh, session expiry | 🟠 Medium | ⬜ |
-| 07 | Feed_Or_ECommerce_App | End-to-end design using 01–06 | 🟠 Medium | ⬜ |
+| 07 | ECommerce_App | Modules, cart and checkout, catalog caching | 🟠 Medium | ⬜ |
 | 08 | Chat_App | WebSocket, message sync, offline queue, delivery status | 🔴 High | ⬜ |
-| 09 | System_Design_Mocks | 2 timed 45-min mocks | 🔴 High | ⬜ |
+| 09 | System_Design_Mocks | 4 timed 45-min mocks | 🔴 High | ⬜ |
 
 ---
 
