@@ -1,0 +1,24 @@
+{
+  "originHash" : "69add2b60af3f06ea8768616da13aa8ee0ebcc784cf57aaf78ce311a6a2b99c3",
+  "pins" : [
+    {
+      "identity" : "paypal-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/paypal/paypal-ios",
+      "state" : {
+        "revision" : "de98414f5cf74dc3db2239a4828b4760ef391d20",
+        "version" : "3.1.1"
+      }
+    },
+    {
+      "identity" : "paypal-risk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/paypal/paypal-risk-ios",
+      "state" : {
+        "revision" : "97d70968d508992f99ac9c46dd1da4c0cf0a2d97",
+        "version" : "5.6.0"
+      }
+    }
+  ],
+  "version" : 3
+}
