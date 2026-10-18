@@ -22,14 +22,17 @@ Use this order in every design round.
 
 | # | System | Must Cover | Priority | Status | Diagram |
 |---|--------|-----------|----------|--------|---------|
-| 01 | Networking_Layer | API client, generic request, decoding, retry | 🔴 High | ✅ | `MVVM_Networking_Layer.png` |
-| 02 | Image_Loading_And_Caching | NSCache + disk cache, cancellation, cell reuse | 🔴 High | ✅ | `Image_Loading_Caching.png` |
+| 01 | Networking_Layer | API client, generic request, decoding, retry | 🔴 High | ✅ | `Networking_Layer.png` |
+| 02 | Image_Loading_And_Caching | NSCache + disk cache, cancellation, cell reuse | 🔴 High | ✅ | `Image Caching.png` |
 | 03 | Offline_First_And_Sync | Local source of truth, sync queue, conflicts | 🔴 High | ✅ | `Offline_First_Sync.png` |
 | 04 | Pagination_And_Search | Offset vs cursor paging, debounce, cancel old requests | 🔴 High | ✅ | `Pagination_Search.png` |
 | 05 | Deep_Linking_System | Universal Links, router, cold/warm start | 🔴 High | ✅ | `Deep_Linking.png` |
 | 06 | Authentication_System | Keychain, token refresh, session expiry | 🟠 Medium | ✅ | `Authentication.png` |
-| 07 | ECommerce_App | Modules, cart and checkout, catalog caching | 🟠 Medium | ✅ | `ECommerce_System_Design.png` · `ECommerce_Class_Design.png` |
+| 07 | ECommerce_App | Modules, cart and checkout, catalog caching | 🟠 Medium | ✅ | `ECommerce_Class_Design.png` |
 | 08 | Chat_App | WebSocket, message sync, offline queue, delivery status | 🔴 High | ✅ | `Chat_App_System_Design.png` |
+| 09 | Apple_Pay_Integration | PassKit, PKPaymentRequest, delegates, DPAN token → gateway, idempotency | 🔴 High | ✅ | `apple-pay-mvvm.png` |
+| 10 | PayPal_Checkout | PayPal SDK v3 session, server create/capture order, return URL, duplicate-payment prevention | 🟠 Medium | ✅ | `PayPal-MVVM.png` |
+| 11 | Bluetooth_BLE | CoreBluetooth scan/connect, connect timeout, GATT parsing, notify, auto-reconnect, Combine | 🟠 Medium | ✅ | — |
 
 ---
 
@@ -43,6 +46,18 @@ One-page high-level diagram per system: flow, key components, trade-offs and int
 | Local DB as source of truth when offline matters |
 | Protocols + DI for every service, so everything is mockable |
 | Typed errors, retry with backoff, token refresh with an actor |
+| Payments: secrets stay on the server, amount comes from the server, one idempotency key per checkout |
+| Hardware (BLE): framework code isolated in one service, mock service for previews and tests |
+
+## Demo Apps
+
+Each demo is a runnable Xcode project with its own README.
+
+| App | Folder | Shows | Stack |
+|-----|--------|-------|-------|
+| Apple Pay | `ApplePayDemo/` | Apple Pay sheet, delegates, mock payment API | SwiftUI · PassKit · MVVM |
+| PayPal | `PayPalDemo/` | PayPal checkout, Node server create/capture | SwiftUI · PayPal iOS SDK v3 · Node.js · MVVM |
+| Bluetooth LE | `BLEDemo/` | Scan, connect, live heart rate, auto-reconnect | SwiftUI · CoreBluetooth · Combine · MVVM |
 
 ## Branches
 
@@ -55,4 +70,4 @@ One-page high-level diagram per system: flow, key components, trade-offs and int
 
 ## Status
 
-8 / 8 systems complete ✅ · Revision ✅ · Diagrams ✅
+11 / 11 systems complete ✅ · Revision ✅ · Diagrams ✅ · Demo apps ✅
